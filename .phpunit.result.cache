@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":226:{a:2:{s:7:"defects";a:1:{s:77:"Infinitypaul\LaravelPasswordHistoryValidation\Tests\ExampleTest::true_is_true";i:4;}s:5:"times";a:1:{s:77:"Infinitypaul\LaravelPasswordHistoryValidation\Tests\ExampleTest::true_is_true";d:0.172;}}}
