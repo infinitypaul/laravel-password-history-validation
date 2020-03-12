@@ -15,9 +15,6 @@ trait PasswordHistoryTrait
             ->latest();
     }
 
-    /**
-     *
-     */
     public function deletePasswordHistory()
     {
         $this->passwordHistory()
