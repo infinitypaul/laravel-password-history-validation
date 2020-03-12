@@ -13,7 +13,7 @@ return [
     'keep' => 2,
 
     /**
-     * The models to be observed on and your password column name
+     * The models to be observed on and your password column name.
      */
     'observe' => [
         'model' => \App\User::class,
