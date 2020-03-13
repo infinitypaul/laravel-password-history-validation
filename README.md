@@ -20,7 +20,7 @@ composer require infinitypaul/laravel-password-history-validation
 To get started, you'll need to publish the config file, and  migrate the database:
 
 ```bash
-php artisan vendor:publish --tag=password-history
+php artisan vendor:publish --tag=password-config
 ```
 Modify the config file according to your project, then migrate the database
 
