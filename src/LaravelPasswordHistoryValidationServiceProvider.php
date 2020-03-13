@@ -25,7 +25,7 @@ class LaravelPasswordHistoryValidationServiceProvider extends ServiceProvider
             ]);
         }
         $model = config('password-history.observe.model');
-        class_exists($model) ?? $model::observe(UserObserver::class);
+        class_exists($model) ? $model::observe(UserObserver::class) : null;
     }
 
     /**
