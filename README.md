@@ -34,7 +34,7 @@ This package will observe the created and updated event of the models (check the
 In Your Form Request or Inline Validation, All You Need To Do Is Instantiate The `NotFromPasswordHistory` class passing the current user as an argument
 ``` php
 <?php
-use Infinitypaul\LaravelPasswordHistoryValidation\Models\PasswordHistoryRepo;
+use Infinitypaul\LaravelPasswordHistoryValidation\Rules\NotFromPasswordHistory;
 
 $this->validate($request, [
             'password' => [
