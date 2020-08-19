@@ -15,7 +15,7 @@ class LaravelPasswordHistoryValidationServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/passwordHistory.php' => config_path('password-history-validation.php'),
+                __DIR__.'/../config/passwordHistory.php' => config_path('password-history.php'),
             ], 'password-config');
             $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
