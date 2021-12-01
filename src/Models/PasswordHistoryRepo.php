@@ -16,7 +16,6 @@ class PasswordHistoryRepo
     /**
      * @param $user
      * @param $checkPrevious
-     *
      * @return mixed
      */
     public static function fetchUser($user, $checkPrevious)

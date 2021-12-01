@@ -9,7 +9,7 @@ class PasswordHistory extends Model
     /**
      * PasswordHistory constructor.
      *
-     * @param array $attributes
+     * @param  array  $attributes
      */
     public function __construct(array $attributes = [])
     {
