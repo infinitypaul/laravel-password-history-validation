@@ -33,7 +33,6 @@ class LaravelPasswordHistoryValidationServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
         // Automatically apply the package configuration
         $this->mergeConfigFrom(__DIR__.'/../config/passwordHistory.php', 'password-history');
     }
