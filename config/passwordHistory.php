@@ -19,4 +19,7 @@ return [
         'model' => \App\Models\User::class,
         'column' => 'password',
     ],
+
+    //Supported:  "integer", "uuid"
+    'primary_id_type' => 'integer',
 ];
