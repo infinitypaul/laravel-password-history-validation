@@ -5,8 +5,8 @@ namespace Infinitypaul\LaravelPasswordHistoryValidation\Models;
 class PasswordHistoryRepo
 {
     /**
-     * @param $password
-     * @param $user_id
+     * @param  $password
+     * @param  $user_id
      */
     public static function storeCurrentPasswordInHistory($password, $user_id)
     {
@@ -14,8 +14,8 @@ class PasswordHistoryRepo
     }
 
     /**
-     * @param $user
-     * @param $checkPrevious
+     * @param  $user
+     * @param  $checkPrevious
      * @return mixed
      */
     public static function fetchUser($user, $checkPrevious)
