@@ -14,7 +14,7 @@ class NotFromPasswordHistory implements Rule
     /**
      * NotFromPasswordHistory constructor.
      *
-     * @param $user
+     * @param  $user
      */
     public function __construct($user)
     {
