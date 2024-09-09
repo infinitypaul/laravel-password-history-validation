@@ -19,7 +19,7 @@ class LaravelPasswordHistoryValidationServiceProvider extends ServiceProvider
             ], 'password-config');
 
             $this->publishes([
-                __DIR__ . '/../database/migrations/2019_12_02_141717_create_password_history_table.php' => database_path('migrations/' . date('Y_m_d_His') . '_create_password_history_table.php'),
+                __DIR__.'/../database/migrations/2019_12_02_141717_create_password_history_table.php' => database_path('migrations/' . date('Y_m_d_His') . '_create_password_history_table.php'),
             ], 'password-migrations');
             
             //Registering package commands.
@@ -31,7 +31,7 @@ class LaravelPasswordHistoryValidationServiceProvider extends ServiceProvider
         $publishedMigration = glob(database_path('migrations/*_create_password_history_table.php'));
         if (empty($publishedMigration)) {
             // Automatically load migrations only if they have not been published
-            $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         }
         
         $model = config('password-history.observe.model');
