@@ -22,7 +22,7 @@ class LaravelPasswordHistoryValidationServiceProvider extends ServiceProvider
                 __DIR__.'/../database/migrations/2019_12_02_141717_create_password_history_table.php' => database_path('migrations/'.date('Y_m_d_His').'_create_password_history_table.php'),
             ], 'password-migrations');
 
-            //Registering package commands.
+            // Registering package commands.
             $this->commands([
                 ClearOldPasswordHistory::class,
             ]);
