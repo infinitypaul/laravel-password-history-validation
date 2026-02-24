@@ -32,6 +32,8 @@ php artisan migrate
 This package will observe the created and updated event of the models (check the config file for settings) and records the password hashes automatically.
 
 In Your Form Request or Inline Validation, All You Need To Do Is Instantiate The `NotFromPasswordHistory` class passing the current user as an argument
+
+### When user is authenticated
 ``` php
 <?php
 use Infinitypaul\LaravelPasswordHistoryValidation\Rules\NotFromPasswordHistory;
@@ -42,6 +44,40 @@ $this->validate($request, [
                 new NotFromPasswordHistory($request->user())
             ]
         ]);
+```
+
+### When the User is not authenticated
+``` php
+<?php
+
+use App\Models\User;
+use Infinitypaul\LaravelPasswordHistoryValidation\Rules\NotFromPasswordHistory;
+
+public function rules(): array
+{
+    // Resolve user manually (email example)
+    $user = User::where('email', $this->input('email'))->first();
+
+    $passwordRules = [
+        'required',
+        'confirmed',
+        Password::default(),
+    ];
+
+    // Only apply history check if user exists
+    if ($user) {
+        $passwordRules[] = new NotFromPasswordHistory($user);
+    }
+
+    return [
+        'email' => [
+            'required',
+            'email',
+            'exists:users,email',
+        ],
+        'password' => $passwordRules,
+    ];
+}
 ```
 
 ### Cleaning Up Old Record - (Optional)
